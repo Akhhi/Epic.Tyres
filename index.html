@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!-- Epic Tyres — Coming Soon landing page
+  Built with Tailwind CSS & Lucide Icons
+  File: Untitled-1 -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epic Tyres — Engineered for the Road Ahead</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes pulse-slow {
+
+      0%,
+      100% {
+        opacity: 0.15;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.3;
+        transform: scale(1.05);
+      }
+    }
+
+    .glow-bg {
+      animation: pulse-slow 8s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-neutral-950 text-neutral-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black relative overflow-x-hidden">
+
+  <!-- Background Ambient Glow & Tread Pattern Overlay -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div
+      class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-amber-500/20 rounded-full blur-[140px] glow-bg">
+    </div>
+    <div class="absolute -bottom-40 right-10 w-[500px] h-[400px] bg-orange-600/10 rounded-full blur-[120px]"></div>
+    <!-- Subtle Grid Overlay -->
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px]">
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div
+        class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/25">
+        <i data-lucide="disc-3" class="w-6 h-6 text-neutral-950 animate-spin" style="animation-duration: 12s;"></i>
+      </div>
+      <span
+        class="text-2xl font-black tracking-wider uppercase bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
+        Epic<span class="text-amber-500">Tyres</span>
+      </span>
+    </div>
+
+    <div
+      class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/60 backdrop-blur-md text-xs font-medium text-neutral-400">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      Development Phase: Pre-Launch
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center flex-1 flex flex-col items-center justify-center">
+
+    <!-- Tagline Badge -->
+    <div
+      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-semibold tracking-wide uppercase mb-6">
+      <i data-lucide="zap" class="w-4 h-4"></i> The Evolution of Grip
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-3xl leading-[1.1]">
+      Engineered for the <span
+        class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">Road
+        Ahead.</span>
+    </h1>
+
+    <!-- Sub-headline -->
+    <p class="mt-6 text-lg sm:text-xl text-neutral-400 max-w-2xl font-normal leading-relaxed">
+      Combining ultra-durable silica compounds with dynamic tread geometry. Built for extreme grip, whisper-quiet
+      highway cruising, and peak all-weather control.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="grid grid-cols-4 gap-3 sm:gap-6 my-10 w-full max-w-md">
+      <div
+        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
+        <span id="days" class="text-2xl sm:text-4xl font-bold text-white font-mono">00</span>
+        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Days</span>
+      </div>
+      <div
+        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
+        <span id="hours" class="text-2xl sm:text-4xl font-bold text-white font-mono">00</span>
+        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Hours</span>
+      </div>
+      <div
+        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
+        <span id="minutes" class="text-2xl sm:text-4xl font-bold text-white font-mono">00</span>
+        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Mins</span>
+      </div>
+      <div
+        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
+        <span id="seconds" class="text-2xl sm:text-4xl font-bold text-amber-500 font-mono">00</span>
+        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Secs</span>
+      </div>
+    </div>
+
+    <!-- Waitlist Capture Form -->
+    <div class="w-full max-w-lg">
+      <form id="waitlist-form"
+        class="flex flex-col sm:flex-row gap-3 bg-neutral-900/90 p-2 rounded-2xl border border-neutral-800 focus-within:border-amber-500/60 shadow-2xl transition-all">
+        <div class="flex-1 flex items-center px-3 gap-2">
+          <i data-lucide="mail" class="w-5 h-5 text-neutral-500"></i>
+          <input type="email" required placeholder="Enter your email for VIP early access..."
+            class="w-full bg-transparent text-sm text-white placeholder-neutral-500 focus:outline-none py-2" />
+        </div>
+        <button type="submit"
+          class="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-neutral-950 font-bold text-sm rounded-xl transition-all transform active:scale-95 shadow-lg shadow-amber-500/20 whitespace-nowrap flex items-center justify-center gap-2">
+          Join VIP List
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </form>
+      <p id="success-msg" class="hidden mt-3 text-sm text-emerald-400 font-medium">
+        ✓ You're on the list! Keep an eye on your inbox for launch privileges.
+      </p>
+      <p class="mt-3 text-xs text-neutral-500">
+        🔒 Zero spam. Get 20% off your launch order + priority shipping.
+      </p>
+    </div>
+
+    <!-- Feature Pillars -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 text-left w-full max-w-4xl">
+      <div class="p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
+        <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 mb-4">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">Carbon-Reinforced Tread</h3>
+        <p class="text-neutral-400 text-sm mt-1">Up to 35% longer lifespan with even wear distribution across
+          high-torque setups.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
+        <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 mb-4">
+          <i data-lucide="cloud-rain" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">Hydro-Channel Siping</h3>
+        <p class="text-neutral-400 text-sm mt-1">Rapid water evacuation for responsive wet braking and zero hydroplaning
+          hesitation.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
+        <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 mb-4">
+          <i data-lucide="gauge" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base">EV & Performance Tuned</h3>
+        <p class="text-neutral-400 text-sm mt-1">Low rolling resistance compound designed for maximum range and acoustic
+          silence.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+    <p>© 2026-2027 Epic Tyres Technologies Inc. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <a href="#" class="hover:text-neutral-300 transition">Privacy Policy</a>
+      <a href="#" class="hover:text-neutral-300 transition">Dealer Inquiries</a>
+      <a href="#" class="hover:text-neutral-300 transition">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Scripts for Icons and Timer -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 60-Day Countdown Target
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 60);
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) return;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1Here is a clean, modern, and high - converting "Coming Soon" landing page tailored for ** Epic Tyres **. 
+
+It features an industrial, performance - driven dark theme with a live countdown timer, an email waitlist form, feature highlights, and a clean responsive structure.
+
+---
+
+### Complete HTML & Tailwind CSS Code
+
+You can save this as `index.html` and open it directly in any browser:
+
+      ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epic Tyres | Performance Engineered For Every Road</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+  <!-- Google Fonts: Inter & Montserrat -->
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link
+    href="[https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@400;500;600&display=swap)"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .heading-font {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Subtle background grid pattern */
+    .bg-grid {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+      background-size: 28px 28px;
+    }
+  </style>
+  </head>
+
+  <body
+    class="bg-neutral-950 text-neutral-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+
+    <!-- Background Decorative Accents -->
+    <div class="fixed inset-0 bg-grid pointer-events-none -z-10"></div>
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-amber-500/10 blur-[130px] rounded-full pointer-events-none -z-10">
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <!-- Logo Mark -->
+        <div
+          class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-amber-500/20">
+          E
+        </div>
+        <span class="heading-font font-black tracking-wider text-xl uppercase">Epic<span
+            class="text-amber-500">Tyres</span></span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-neutral-400">Launching Soon</span>
+      </div>
+    </header>
+
+    <!-- Hero & Main Content -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-12 text-center flex flex-col items-center">
+
+      <!-- Tagline Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 text-xs font-medium uppercase tracking-wider mb-8">
+        <span>Next-Gen Performance & Durability</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="heading-font font-black text-4xl sm:text-6xl md:text-7xl uppercase tracking-tight leading-[1.05] mb-6">
+        Re-engineering <br class="hidden sm:block" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500">Grip,
+          Speed & Control</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-neutral-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Engineered for extreme endurance, all-weather stability, and motorsport precision. Sign up to get exclusive
+        early access and launch-week discounts.
+      </p>
+
+      <!-- Countdown Timer -->
+      <div class="grid grid-cols-4 gap-3 sm:gap-6 max-w-md w-full mb-12">
+        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
+          <span id="days" class="heading-font block text-2xl sm:text-4xl font-extrabold text-white">30</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Days</span>
+        </div>
+        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
+          <span id="hours" class="heading-font block text-2xl sm:text-4xl font-extrabold text-white">08</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Hours</span>
+        </div>
+        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
+          <span id="minutes" class="heading-font block text-2xl sm:text-4xl font-extrabold text-white">45</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Mins</span>
+        </div>
+        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
+          <span id="seconds" class="heading-font block text-2xl sm:text-4xl font-extrabold text-amber-500">12</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Secs</span>
+        </div>
+      </div>
+
+      <!-- Email Capture Form -->
+      <div class="w-full max-w-lg">
+        <form id="notify-form" onsubmit="event.preventDefault(); alert('You\'re on the list! Watch your inbox.');"
+          class="flex flex-col sm:flex-row gap-3">
+          <input type="email" required placeholder="Enter your email address..."
+            class="flex-1 bg-neutral-900/90 border border-neutral-800 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition" />
+          <button type="submit"
+            class="bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-black font-bold px-7 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-amber-500/20 whitespace-nowrap">
+            Notify Me
+          </button>
+        </form>
+        <p class="text-neutral-400 text-xs mt-3">🔒 No spam. Only product announcements & exclusive launch perks.</p>
+      </div>
+
+      <!-- Feature Pillars -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl w-full mt-16 pt-12 border-t border-neutral-800/80">
+        <div class="text-left p-4 rounded-xl bg-neutral-900/40 border border-neutral-800/50">
+          <div class="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 font-bold mb-3">
+            ✓</div>
+          <h3 class="font-semibold text-sm text-neutral-200 mb-1">Ultra-Grip Compound</h3>
+          <p class="text-xs text-neutral-400">Maximum traction in wet and dry conditions without compromising tread
+            life.</p>
+        </div>
+
+        <div class="text-left p-4 rounded-xl bg-neutral-900/40 border border-neutral-800/50">
+          <div class="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 font-bold mb-3">
+            ✓</div>
+          <h3 class="font-semibold text-sm text-neutral-200 mb-1">Reinforced Sidewalls</h3>
+          <p class="text-xs text-neutral-400">Built to withstand sharp impacts, potholes, and heavy cornering loads.</p>
+        </div>
+
+        <div class="text-left p-4 rounded-xl bg-neutral-900/40 border border-neutral-800/50">
+          <div class="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 font-bold mb-3">
+            ✓</div>
+          <h3 class="font-semibold text-sm text-neutral-200 mb-1">Quiet-Drive Acoustics</h3>
+          <p class="text-xs text-neutral-400">Harmonic groove patterns designed to reduce road noise and cabin
+            vibration.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="w-full max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-900 text-xs text-neutral-400">
+      <p>&copy; <span id="year"></span> Epic Tyres. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-amber-400 transition">Instagram</a>
+        <a href="#" class="hover:text-amber-400 transition">Twitter / X</a>
+        <a href="#" class="hover:text-amber-400 transition">LinkedIn</a>
+      </div>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 30 days countdown simulation
+    let totalSeconds = 30 * 24 * 60 * 60 + 8 * 3600 + 45 * 60;
+    
+    function updateCountdown() {
+      const days = Math.floor(totalSeconds / (3600 * 24));
+      const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      }
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    </script>
+  </body>
+
+</html>
