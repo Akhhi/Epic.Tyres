@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epic Tyres — Connect With Us</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .heading-font { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 min-h-screen flex flex-col justify-between p-5 selection:bg-amber-500 selection:text-black">
+
+  <!-- Ambient Glow -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-amber-500/10 blur-[100px] rounded-full pointer-events-none -z-10"></div>
+
+  <!-- Main Container -->
+  <main class="w-full max-w-sm mx-auto flex-1 flex flex-col justify-center items-center text-center py-6">
+    
+    <!-- Logo & Brand Header -->
+    <div class="w-16 h-16 rounded-2xl bg-amber-500 flex items-center justify-center font-black text-black text-2xl shadow-xl shadow-amber-500/20 mb-4">
+      E
+    </div>
+    
+    <h1 class="heading-font text-2xl font-black uppercase tracking-wider text-white">
+      Epic<span class="text-amber-500">Tyres</span>
+    </h1>
+    <p class="text-xs text-neutral-400 mt-1 max-w-[240px]">
+      Premium Tyres, Wheel Balancing & Alignment Specialists
+    </p>
+
+    <!-- Options Card Container -->
+    <div class="w-full mt-8 space-y-4">
+
+      <!-- Option 1: Save Contact (vCard Download) -->
+      <button 
+        onclick="downloadVCard()" 
+        class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-neutral-950 rounded-2xl font-bold shadow-lg shadow-amber-500/20 active:scale-[0.98] transition group text-left"
+      >
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-black/15 flex items-center justify-center">
+            <i data-lucide="user-plus" class="w-5 h-5 text-neutral-950"></i>
+          </div>
+          <div>
+            <div class="text-sm font-extrabold leading-tight">Save Contact</div>
+            <div class="text-[11px] font-medium text-neutral-900/80">Add to your address book</div>
+          </div>
+        </div>
+        <i data-lucide="arrow-down-to-line" class="w-5 h-5 text-neutral-950 group-hover:translate-y-0.5 transition-transform"></i>
+      </button>
+
+      <!-- Option 2: Google Maps Location -->
+      <!-- Replace the href with your exact Google Maps link or place query -->
+      <a 
+        href="https://maps.google.com/?q=Epic+Tyres" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="w-full flex items-center justify-between p-4 bg-neutral-900/90 hover:bg-neutral-800/90 border border-neutral-800 text-white rounded-2xl font-bold shadow-md active:scale-[0.98] transition group text-left"
+      >
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+            <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>
+          </div>
+          <div>
+            <div class="text-sm font-extrabold leading-tight text-white">Find on Google Maps</div>
+            <div class="text-[11px] font-medium text-neutral-400">Get instant directions</div>
+          </div>
+        </div>
+        <i data-lucide="external-link" class="w-5 h-5 text-neutral-500 group-hover:text-amber-500 transition-colors"></i>
+      </a>
+
+    </div>
+
+    <!-- Secondary Quick Actions -->
+    <div class="w-full grid grid-cols-2 gap-3 mt-4">
+      <a 
+        href="tel:+1234567890" 
+        class="flex items-center justify-center gap-2 p-3 bg-neutral-900/50 border border-neutral-800/60 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:border-neutral-700 transition"
+      >
+        <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-500"></i>
+        Call Us
+      </a>
+
+      <a 
+        href="https://wa.me/1234567890?text=Hi%20Epic%20Tyres,%20I%20found%20you%20via%20your%20business%20card!" 
+        target="_blank"
+        rel="noopener noreferrer" 
+        class="flex items-center justify-center gap-2 p-3 bg-neutral-900/50 border border-neutral-800/60 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:border-neutral-700 transition"
+      >
+        <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+        WhatsApp
+      </a>
+    </div>
+
+    <!-- Main Website Link -->
+    <a href="/" class="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-300 transition mt-8">
+      <span>Visit full website</span>
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-[10px] text-neutral-600 pb-2">
+    © Epic Tyres • Fast & Reliable Tyre Services
+  </footer>
+
+  <!-- Contact Download Script -->
+  <script>
+    lucide.createIcons();
+
+    function downloadVCard() {
+      // Customize your contact info here
+      const contact = {
+        name: "Epic Tyres",
+        phone: "+1234567890",
+        email: "contact@epictyres.com",
+        website: "https://epictyres.netlify.app",
+        address: "123 Tyre Street, Auto Hub, City"
+      };
+
+      const vcardData = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        `FN:${contact.name}`,
+        `ORG:${contact.name}`,
+        `TEL;TYPE=WORK,VOICE:${contact.phone}`,
+        `EMAIL;TYPE=WORK:${contact.email}`,
+        `URL:${contact.website}`,
+        `ADR;TYPE=WORK:;;${contact.address};;;;`,
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8;" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute("download", "Epic_Tyres.vcf");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
