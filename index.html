@@ -1,392 +1,1414 @@
 <!DOCTYPE html>
-<!-- Epic Tyres — Coming Soon landing page
-  Built with Tailwind CSS & Lucide Icons
-  File: Untitled-1 -->
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Epic Tyres — Engineered for the Road Ahead</title>
+  <title>Epic Tyres | Used Tyres in Coimbatore | Ukkadam</title>
+  <meta name="description"
+    content="Epic Tyres is a used tyre shop in Ukkadam, Coimbatore, offering used car, SUV and 4x4 tyres across many brands and sizes. Check current availability on WhatsApp.">
+  <meta name="robots" content="index, follow">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome Icons for Brands & Socials -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            },
+            dark: {
+              900: '#0c0e12',
+              850: '#12161f',
+              800: '#181e2b',
+              700: '#262f42',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
   <style>
-    @keyframes pulse-slow {
-
-      0%,
-      100% {
-        opacity: 0.15;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.3;
-        transform: scale(1.05);
-      }
+    /* Custom Scrollbar for sleek aesthetic */
+    ::-webkit-scrollbar {
+      width: 8px;
     }
 
-    .glow-bg {
-      animation: pulse-slow 8s infinite ease-in-out;
+    ::-webkit-scrollbar-track {
+      background: #0c0e12;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #262f42;
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+
+    .badge-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TireShop",
+    "name": "Epic Tyres",
+    "description": "Used tyres for cars, SUVs and 4x4 vehicles in Ukkadam, Coimbatore, with stock across many brands and sizes.",
+    "telephone": "+91 63744 99613",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "New Market, M.M.A. Market, Ukkadam",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61591326549420",
+      "https://instagram.com/epic.tyres",
+      "https://www.youtube.com/@Epic_Tyres"
+    ]
+  }
+  </script>
 </head>
 
-<body
-  class="bg-neutral-950 text-neutral-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black relative overflow-x-hidden">
+<body class="bg-dark-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-black">
 
-  <!-- Background Ambient Glow & Tread Pattern Overlay -->
-  <div class="fixed inset-0 pointer-events-none z-0">
-    <div
-      class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-amber-500/20 rounded-full blur-[140px] glow-bg">
-    </div>
-    <div class="absolute -bottom-40 right-10 w-[500px] h-[400px] bg-orange-600/10 rounded-full blur-[120px]"></div>
-    <!-- Subtle Grid Overlay -->
-    <div
-      class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px]">
-    </div>
-  </div>
-
-  <!-- Header / Navigation -->
-  <header class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div
-        class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/25">
-        <i data-lucide="disc-3" class="w-6 h-6 text-neutral-950 animate-spin" style="animation-duration: 12s;"></i>
+  <aside class="bg-dark-850 border-b border-dark-700/60 text-xs py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-slate-400">
+        <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Used Tyres in Coimbatore
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-shield-halved text-brand-500 mr-1"></i> Lifetime
+          Replacement Warranty on Eligible Tyres</span>
       </div>
-      <span
-        class="text-2xl font-black tracking-wider uppercase bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
-        Epic<span class="text-amber-500">Tyres</span>
-      </span>
+
+      <!-- Top Social Quick Links -->
+      <div class="flex items-center gap-4 text-slate-300">
+        <span class="text-slate-500 text-[11px] hidden sm:inline">Connect with us:</span>
+        <a href="https://www.facebook.com/profile.php?id=61591326549420" target="_blank" rel="noopener noreferrer"
+          class="hover:text-blue-500 transition-colors" title="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/epic.tyres" target="_blank" rel="noopener noreferrer"
+          class="hover:text-pink-500 transition-colors" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@Epic_Tyres" target="_blank" rel="noopener noreferrer"
+          class="hover:text-red-500 transition-colors" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+          class="hover:text-emerald-400 transition-colors flex items-center gap-1 text-[11px]"
+          title="Google Map Profile">
+          <i class="fa-solid fa-location-dot text-emerald-400"></i>
+          <span class="hidden md:inline">Ukkadam, Coimbatore</span>
+        </a>
+        <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank" rel="noopener noreferrer"
+          class="hover:text-green-400 transition-colors flex items-center gap-1 font-semibold text-brand-400 ml-1">
+          <i class="fa-brands fa-whatsapp"></i> Chat Live
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <header class="sticky top-0 z-40 bg-dark-900/90 backdrop-blur-md border-b border-dark-700/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 flex items-center justify-center">
+          <img src="img/EpicTyresIcon.png" alt="epicLogo">
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-white block">Epic <span
+              class="text-brand-500">Tyres</span></span>
+          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold block -mt-1"> Used Tyres in
+            Coimbatore</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#inventory" class="hover:text-brand-400 transition-colors">Tyre Sizes</a>
+        <a href="#quality" class="hover:text-brand-400 transition-colors">Why Epic Tyres</a>
+        <a href="#social-hub" class="hover:text-brand-400 transition-colors">Community</a>
+        <a href="#location" class="hover:text-brand-400 transition-colors">Find Store</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:+916374499613"
+          class="px-5 py-2.5 rounded-xl border border-dark-700 hover:border-slate-500 text-slate-200 text-sm font-semibold transition-all flex items-center gap-2">
+          <i class="fa-solid fa-phone text-xs text-brand-400"></i> Call Desk
+        </a>
+        <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank"
+          class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm shadow-md shadow-brand-500/25 flex items-center gap-2 transition-all hover:shadow-brand-500/40">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Check Stock</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg"
+        aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
     </div>
 
-    <div
-      class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/60 backdrop-blur-md text-xs font-medium text-neutral-400">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-      Development Phase: Pre-Launch
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pt-3 pb-6 bg-dark-850 border-b border-dark-700/80 space-y-3">
+      <a href="#inventory" class="block py-2 text-slate-300 hover:text-brand-400 font-medium">Tyre Sizes</a>
+      <a href="#quality" class="block py-2 text-slate-300 hover:text-brand-400 font-medium">Why Epic Tyres</a>
+      <a href="#social-hub" class="block py-2 text-slate-300 hover:text-brand-400 font-medium">Social Channels</a>
+      <a href="#location" class="block py-2 text-slate-300 hover:text-brand-400 font-medium">Locate Store</a>
+      <div class="pt-3 flex flex-col gap-2">
+        <a href="tel:+916374499613"
+          class="text-center py-2.5 rounded-xl border border-dark-700 text-white font-semibold flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone text-sm text-brand-400"></i> Call 63744 99613
+        </a>
+        <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank"
+          class="text-center py-2.5 rounded-xl bg-brand-500 text-dark-900 font-bold flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Enquiry
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center flex-1 flex flex-col items-center justify-center">
-
-    <!-- Tagline Badge -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <!-- Subtle Background Glows -->
     <div
-      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-semibold tracking-wide uppercase mb-6">
-      <i data-lucide="zap" class="w-4 h-4"></i> The Evolution of Grip
+      class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-brand-500/10 blur-[130px] rounded-full pointer-events-none">
+    </div>
+    <div class="absolute bottom-0 right-10 w-96 h-96 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-xs font-semibold tracking-wide">
+            <i class="fa-solid fa-location-dot"></i> Used Tyres • Ukkadam, Coimbatore
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Used Tyres in<br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-amber-500">Coimbatore.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Epic Tyres is based at New Market, M.M.A. Market, Ukkadam, Coimbatore. We specialise in used tyres across
+            many brands and tyre sizes for cars, SUVs and 4x4 vehicles. Ask us about current stock, tyre condition and
+            pricing on WhatsApp.
+          </p>
+
+          <!-- Core Call To Actions -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#inventory"
+              class="px-7 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-extrabold text-sm sm:text-base transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brand-500/30 flex items-center gap-2">
+              <i class="fa-solid fa-layer-group"></i> Browse Popular Sizes
+            </a>
+            <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20want%20to%20send%20a%20photo%20of%20my%20car%20tyre%20for%20quote"
+              target="_blank"
+              class="px-7 py-3.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-dark-700 text-slate-100 font-semibold text-sm sm:text-base transition-all flex items-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i> Send Photo on WhatsApp
+            </a>
+          </div>
+
+          <!-- Trust Proof Metrics -->
+          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-dark-700/60 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">5.0<span class="text-brand-500">★</span></div>
+              <div class="text-xs text-slate-400 mt-0.5">Google Rating</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">1000<span class="text-brand-500">+</span>
+              </div>
+              <div class="text-xs text-slate-400 mt-0.5">Used Tyres Stock</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">500<span class="text-brand-500">+</span>
+              </div>
+              <div class="text-xs text-slate-400 mt-0.5">Premium Branded Tyres</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Quick Tyre Enquiry Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-dark-850 border border-dark-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+            <div
+              class="absolute -top-3 right-6 bg-brand-500 text-dark-900 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Fast Response
+            </div>
+
+            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-brand-500"></i> Quick Stock Enquiry
+            </h3>
+            <p class="text-xs text-slate-400 mb-6">Tell us your car and tyre size for real-time stock availability,
+              photos & price quotes.</p>
+
+            <form id="heroQuickForm" class="space-y-4">
+              <!-- Vehicle Model Field -->
+              <div>
+                <label for="quickCar"
+                  class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 flex items-center justify-between">
+                  <span>Vehicle Model</span>
+                  <span class="text-[10px] text-brand-400 lowercase font-normal">required</span>
+                </label>
+                <div class="relative">
+                  <i class="fa-solid fa-car absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
+                  <input type="text" id="quickCar" placeholder="e.g. Honda City, Toyota Fortuner, Hyundai Creta"
+                    class="w-full bg-dark-900 border border-dark-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"
+                    required />
+                </div>
+              </div>
+
+              <!-- Tyre Size: Three Distinct Inputs (Width / Profile / Rim) -->
+              <div>
+                <label
+                  class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 flex items-center justify-between">
+                  <span>Tyre Size</span>
+                  <span class="text-[10px] text-brand-400 lowercase font-normal">width / profile / rim</span>
+                </label>
+                <div class="grid grid-cols-3 gap-2">
+                  <div class="relative">
+                    <input type="number" id="tyreWidth" placeholder="Width (205)" min="100" max="400"
+                      class="w-full bg-dark-900 border border-dark-700 rounded-xl px-2.5 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-center"
+                      required />
+                  </div>
+                  <div class="relative">
+                    <input type="number" id="tyreProfile" placeholder="Profile (55)" min="20" max="100"
+                      class="w-full bg-dark-900 border border-dark-700 rounded-xl px-2.5 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-center"
+                      required />
+                  </div>
+                  <div class="relative">
+                    <input type="text" id="tyreRim" placeholder="Rim (R16)"
+                      class="w-full bg-dark-900 border border-dark-700 rounded-xl px-2.5 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-center"
+                      required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quantity Selector: 1, 2, 4 and custom input placeholder -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Quantity Needed
+                </label>
+                <div class="grid grid-cols-4 gap-2 items-center" id="qtySelectorGroup">
+                  <button type="button"
+                    class="qty-btn active py-2.5 rounded-xl text-xs font-bold border border-brand-500 bg-brand-500/20 text-brand-400 transition-all text-center"
+                    data-qty="1">
+                    1
+                  </button>
+                  <button type="button"
+                    class="qty-btn py-2.5 rounded-xl text-xs font-bold border border-dark-700 bg-dark-900 text-slate-400 hover:text-white transition-all text-center"
+                    data-qty="2">
+                    2
+                  </button>
+                  <button type="button"
+                    class="qty-btn py-2.5 rounded-xl text-xs font-bold border border-dark-700 bg-dark-900 text-slate-400 hover:text-white transition-all text-center"
+                    data-qty="4">
+                    4
+                  </button>
+                  <div>
+                    <input type="number" id="customQtyInput" min="1" step="1" placeholder="custom"
+                      class="w-full py-2.5 px-2 bg-dark-900 border border-dark-700 rounded-xl text-xs font-bold text-white placeholder-slate-500 text-center focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit CTA Button -->
+              <button type="submit"
+                class="w-full mt-2 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm tracking-wide transition-all shadow-md shadow-brand-500/25 flex items-center justify-center gap-2 group">
+                <i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
+                <span>Enquire via WhatsApp</span>
+              </button>
+
+              <div class="text-center pt-1">
+                <span class="text-[11px] text-slate-400">Prefer direct call? Dial our shop desk: <a
+                    href="tel:+916374499613"
+                    class="text-white font-semibold underline underline-offset-2 hover:text-brand-400">+91 63744
+                    99613</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="about" class="py-16 bg-dark-900 border-b border-dark-700/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <span class="text-brand-500 font-semibold text-xs uppercase tracking-widest">Epic Tyres • Ukkadam •
+            Coimbatore</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Used Tyres in Coimbatore Across
+            Many Brands & Sizes</h2>
+          <p class="text-slate-300 leading-relaxed mt-4">Epic Tyres is a local tyre business at New Market, M.M.A.
+            Market, Ukkadam, Coimbatore. We specialise in used tyres across many brands and tyre sizes for cars, SUVs
+            and 4x4 vehicles. Our stock changes regularly, so contact us for current options.</p>
+          <p class="text-slate-400 leading-relaxed mt-3">If you are looking for <strong class="text-slate-200">used
+              tyres in Coimbatore</strong>, a <strong class="text-slate-200">used tyre shop in Coimbatore</strong>,
+            <strong class="text-slate-200">second-hand tyres in Coimbatore</strong> or a <strong
+              class="text-slate-200">used tyre shop in Ukkadam</strong>, send us your vehicle model and tyre size. We
+            can check current brands, condition, quantity and price.
+          </p>
+        </div>
+        <div class="bg-dark-850 border border-dark-700 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white">Looking for a specific tyre?</h3>
+          <p class="text-sm text-slate-400 mt-2">Send your tyre size, vehicle model or a photo of the tyre sidewall. We
+            will check current availability.</p>
+          <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20want%20to%20check%20tyre%20availability."
+            target="_blank" rel="noopener noreferrer"
+            class="mt-5 w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Check Availability on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="quality" class="py-20 bg-dark-850 border-y border-dark-700/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-500 font-semibold text-xs uppercase tracking-widest block mb-2">Why Choose Epic
+          Tyres</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Used Tyres You Can Buy With Confidence
+        </h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base">We focus on genuine tyre condition, clear pricing, useful
+          guidance and a straightforward buying experience in Ukkadam, Coimbatore.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Feature 1: Inspected Tyres -->
+        <div
+          class="p-6 rounded-2xl bg-dark-900 border border-dark-700/80 hover:border-brand-500/50 transition-colors group">
+          <div
+            class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Inspected Tyres</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Used tyres are checked for visible tread condition, sidewall
+            condition and obvious damage before being offered for sale. We explain the condition and available options
+            so you can make an informed choice.</p>
+        </div>
+
+        <!-- Feature 2: Lifetime Replacement Warranty -->
+        <div
+          class="relative p-6 rounded-2xl bg-dark-900 border border-dark-700/80 hover:border-brand-500/50 transition-colors group">
+          <button type="button" onclick="openWarrantyModal()"
+            aria-label="View Lifetime Replacement Warranty information"
+            class="absolute top-4 right-4 w-7 h-7 rounded-full border border-dark-600 text-slate-400 hover:text-brand-400 hover:border-brand-500 transition-colors text-xs font-bold">?</button>
+          <div
+            class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 pr-8">Lifetime Replacement Warranty</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Many eligible tyres come with our Lifetime Replacement
+            Warranty. Where applicable, warranty support covers manufacturing defects and cases where the tyre does not
+            last for the period or performance we promised.</p>
+        </div>
+
+        <!-- Feature 3: Honest and Affordable Pricing -->
+        <div
+          class="p-6 rounded-2xl bg-dark-900 border border-dark-700/80 hover:border-brand-500/50 transition-colors group">
+          <div
+            class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Honest &amp; Affordable Pricing</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We aim to offer practical options at competitive prices.
+            Pricing depends on brand, size, condition, tread and availability, and we can share the current options and
+            price before you decide.</p>
+        </div>
+
+        <!-- Feature 4: All India Delivery -->
+        <div
+          class="p-6 rounded-2xl bg-dark-900 border border-dark-700/80 hover:border-brand-500/50 transition-colors group">
+          <div
+            class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Availability &amp; Delivery Options</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Stock changes regularly. Contact us on WhatsApp to check the
+            tyre size, brand, condition and current availability. Ask us about delivery options for your location.</p>
+        </div>
+
+        <!-- Feature 5: Trusted Local Business -->
+        <div
+          class="p-6 rounded-2xl bg-dark-900 border border-dark-700/80 hover:border-brand-500/50 transition-colors group">
+          <div
+            class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Trusted Local Business</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We are a local tyre business at New Market, M.M.A. Market,
+            Ukkadam, Coimbatore. Visit us in person or message us on WhatsApp for current tyre options and honest
+            guidance.</p>
+        </div>
+
+        <!-- Feature 6: Eco-Conscious -->
+        <div
+          class="p-6 rounded-2xl bg-dark-900 border border-dark-700/80 hover:border-brand-500/50 transition-colors group">
+          <div
+            class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Eco-Conscious &amp; Green</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Choosing a suitable used tyre can extend the useful life of
+            an existing product. We help customers consider used-tyre options where they are appropriate for their
+            vehicle and requirement.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifetime Replacement Warranty Modal -->
+  <div id="warrantyModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog"
+    aria-modal="true" aria-labelledby="warrantyModalTitle">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeWarrantyModal()"></div>
+    <div
+      class="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-dark-850 border border-dark-700 rounded-2xl shadow-2xl p-6 sm:p-8">
+      <button type="button" onclick="closeWarrantyModal()" aria-label="Close warranty information"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full border border-dark-600 text-slate-400 hover:text-white hover:border-brand-500 transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div
+        class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-xl mb-4">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <span class="text-brand-500 font-semibold text-xs uppercase tracking-widest">Warranty Support</span>
+      <h2 id="warrantyModalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Lifetime Replacement
+        Warranty</h2>
+      <p class="text-slate-300 text-sm leading-relaxed mt-4">Many eligible used tyres sold by Epic Tyres are covered by
+        our Lifetime Replacement Warranty.</p>
+      <div class="mt-5 space-y-3 text-sm text-slate-300 leading-relaxed">
+        <p><strong class="text-white">What it can cover:</strong> qualifying manufacturing defects and cases where an
+          eligible tyre does not last for the period or performance that Epic Tyres promised for that tyre.</p>
+        <p><strong class="text-white">Eligibility:</strong> warranty coverage is not automatically included with every
+          tyre. The applicable warranty, promised period and conditions are explained at the time of purchase.</p>
+        <p><strong class="text-white">Inspection:</strong> if a warranty claim is made, Epic Tyres will inspect the tyre
+          before deciding whether the issue falls within the applicable warranty.</p>
+        <p><strong class="text-white">Not every damage is covered:</strong> road hazards, punctures, impact damage,
+          misuse, incorrect inflation, fitting-related damage and other causes outside the promised warranty may not
+          qualify.</p>
+        <p class="text-slate-400">Please keep your purchase details and contact us if you believe an eligible tyre has
+          developed a covered problem.</p>
+      </div>
+      <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20would%20like%20to%20know%20the%20warranty%20terms%20for%20a%20tyre."
+        target="_blank" rel="noopener noreferrer"
+        class="mt-6 w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp"></i> Ask About Warranty
+      </a>
+    </div>
+  </div>
+
+  <section id="inventory" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-brand-500 font-semibold text-xs uppercase tracking-widest block mb-2">Most Requested
+            Sizes</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Popular Tyre Sizes Available</h2>
+          <p class="text-slate-400 text-sm mt-2">Available across many tyre brands, with local
+            workshop fitting.</p>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="flex flex-wrap gap-2" id="filterContainer">
+          <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold bg-brand-500 text-dark-900"
+            data-filter="all">All Sizes</button>
+          <button
+            class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-dark-800 border border-dark-700 text-slate-300 hover:text-white"
+            data-filter="14-15">14" &amp; 15" Hatchback</button>
+          <button
+            class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-dark-800 border border-dark-700 text-slate-300 hover:text-white"
+            data-filter="16">16" Sedan &amp; Crossover</button>
+          <button
+            class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-dark-800 border border-dark-700 text-slate-300 hover:text-white"
+            data-filter="17-18">17" &amp; 18"+ SUV &amp; Luxury</button>
+        </div>
+      </div>
+
+      <!-- Tyre Cards Grid: Only Tyre Size, Suitable For, and Enquiry CTA -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="tyreCardsGrid">
+
+        <!-- Size 1: 185/65 R15 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="14-15">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">15"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Standard</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                185/65 R15</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Maruti Swift, Baleno, Dzire, Hyundai i20, Honda
+                Amaze</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('185/65 R15')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 2: 195/65 R15 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="14-15">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">15"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Comfort</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                195/65 R15</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Toyota Corolla Altis, Hyundai Elantra, VW Vento,
+                Skoda Rapid</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('195/65 R15')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 3: 205/55 R16 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="16">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">16"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Sedan</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                205/55 R16</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Skoda Octavia, VW Jetta, Hyundai Verna, Honda Civic
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('205/55 R16')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 4: 215/60 R16 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="16">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">16"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Compact SUV</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                215/60 R16</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Maruti Brezza, Hyundai Venue, Kia Sonet, Toyota
+                Urban Cruiser</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('215/60 R16')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 5: 215/60 R17 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="17-18">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">17"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Mid SUV</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                215/60 R17</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Hyundai Creta, Kia Seltos, MG Hector, Maruti Grand
+                Vitara</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('215/60 R17')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 6: 225/45 R17 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="17-18">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">17"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Luxury Saloon</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                225/45 R17</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">BMW 3-Series, Audi A3/A4, Mercedes C-Class, Skoda
+                Superb</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('225/45 R17')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 7: 235/65 R17 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="17-18">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">17"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Full SUV</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                235/65 R17</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Mahindra XUV700, Tata Harrier, Tata Safari,
+                Mahindra Scorpio-N</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('235/65 R17')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Size 8: 265/65 R17 -->
+        <div
+          class="tyre-card bg-dark-850 rounded-2xl border border-dark-700/80 p-6 flex flex-col justify-between hover:border-brand-500/60 transition-all group"
+          data-category="17-18">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm font-bold">17"</span>
+              <span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">4x4 / Off-Road</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-black text-white tracking-tight group-hover:text-brand-400 transition-colors">
+                265/65 R17</h3>
+              <p class="text-xs text-brand-500/90 font-medium mt-1 uppercase tracking-wider">Suitable For:</p>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Toyota Fortuner, Ford Endeavour, Isuzu D-Max,
+                Mitsubishi Pajero</p>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-dark-700/80">
+            <button onclick="enquireSpecificTyreSize('265/65 R17')"
+              class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-brand-500 hover:text-dark-900 border border-dark-700 text-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm text-emerald-400 group-hover:text-dark-900"></i>
+              <span>Enquire Availability</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner note -->
+      <div
+        class="mt-8 text-center bg-dark-850/50 border border-dark-700/50 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-circle-question text-brand-400 text-xl"></i>
+          <span class="text-sm text-slate-300">Looking for a different tyre size, brand or vehicle fitment? Ask us for
+            current availability.</span>
+        </div>
+        <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20am%20looking%20for%20a%20specific%20tyre%20size"
+          target="_blank" rel="noopener noreferrer"
+          class="text-xs font-bold text-brand-400 hover:text-brand-300 underline underline-offset-4 whitespace-nowrap">
+          Check any custom size on WhatsApp &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="social-hub" class="py-20 bg-dark-850 border-t border-dark-700/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-500 font-semibold text-xs uppercase tracking-widest block mb-2">Connect Across Social
+          Channels</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Follow Our Journey & Reviews</h2>
+        <p class="text-slate-400 text-sm mt-2">See actual stock arrivals, tyre condition updates, customer vehicles,
+          offers and Google feedback.</p>
+      </div>
+
+      <!-- Social Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Facebook Card -->
+        <div
+          class="bg-dark-900 rounded-2xl border border-dark-700 p-6 flex flex-col justify-between hover:border-blue-600 transition-all group">
+          <div>
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-600/20 text-blue-500 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-white text-base">Facebook Page</h3>
+              <span class="text-[11px] bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded font-semibold">Epic Tyres</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed mt-2">
+              Weekly tyre clearance lots, wholesale bulk deals for fleet operators, and community car maintenance
+              discussions.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-700">
+            <a href="https://www.facebook.com/profile.php?id=61591326549420" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-bold text-blue-400 group-hover:text-blue-300 flex items-center justify-between">
+              <span>Join our Facebook Community</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instagram Card -->
+        <div
+          class="bg-dark-900 rounded-2xl border border-dark-700 p-6 flex flex-col justify-between hover:border-pink-500 transition-all group">
+          <div>
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-yellow-500/10 via-pink-500/10 to-purple-500/10 border border-pink-500/20 text-pink-500 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-white text-base">Instagram Page</h3>
+              <span
+                class="text-[11px] bg-pink-500/20 text-pink-400 px-2 py-0.5 rounded font-semibold">@epic.tyres</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed mt-2">
+              Stock updates, tyre condition information, tyre-size guides, stock arrivals and customer vehicle
+              fits.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-700">
+            <a href="https://instagram.com/epic.tyres" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-bold text-pink-400 group-hover:text-pink-300 flex items-center justify-between">
+              <span>View Reels & Photos</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- YouTube Channel Card -->
+        <div
+          class="bg-dark-900 rounded-2xl border border-dark-700 p-6 flex flex-col justify-between hover:border-red-600 transition-all group">
+          <div>
+            <div
+              class="w-12 h-12 rounded-xl bg-red-600/10 border border-red-600/20 text-red-500 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-white text-base">YouTube Channel</h3>
+              <span class="text-[11px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-semibold">@Epic_Tyres</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed mt-2">
+              Video guides: tyre size, tyre condition, manufacture dates (DOT codes), used tyre tips, stock updates and
+              tyre offers.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-700">
+            <a href="https://www.youtube.com/@Epic_Tyres" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-bold text-red-400 group-hover:text-red-300 flex items-center justify-between">
+              <span>Subscribe to Guides</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Business Profile Card -->
+        <div
+          class="bg-dark-900 rounded-2xl border border-dark-700 p-6 flex flex-col justify-between hover:border-emerald-500 transition-all group">
+          <div>
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-white text-base">Google Business</h3>
+              <span class="text-[11px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-semibold">5.0
+                ★★★★★</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed mt-2">
+              Find Epic Tyres at New Market, M.M.A. Market, Ukkadam, Coimbatore. Check our Google Business Profile for
+              customer reviews, location and directions.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-700">
+            <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-bold text-emerald-400 group-hover:text-emerald-300 flex items-center justify-between">
+              <span>View Location on Google Maps</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live YouTube Video & Review Teaser -->
+      <!-- <div class="mt-12 bg-dark-900 rounded-2xl border border-dark-700 p-6 sm:p-8">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+
+          <div class="md:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-red-400 uppercase tracking-widest">
+              <i class="fa-solid fa-play"></i> Featured Video Walkthrough
+            </div>
+            <h3 class="text-2xl font-bold text-white">Tyre Tips, Stock Updates &amp; Offers</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Follow Epic Tyres for real stock updates, tyre-size information, used-tyre tips, stock arrivals and
+              offers. We regularly share actual products and business updates on our social channels.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="https://www.youtube.com/@Epic_Tyres" target="_blank"
+                class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs flex items-center gap-2 transition-colors">
+                <i class="fa-brands fa-youtube"></i> Watch on YouTube
+              </a>
+              <a href="https://instagram.com/epic.tyres" target="_blank"
+                class="px-5 py-2.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-dark-700 text-slate-200 font-semibold text-xs flex items-center gap-2 transition-colors">
+                <i class="fa-brands fa-instagram"></i> Follow Daily Deliveries
+              </a>
+            </div>
+          </div> -->
+
+      <!-- Video Thumbnail Card -->
+      <!-- <div class="md:col-span-6 relative group overflow-hidden rounded-xl border border-dark-700">
+            <div class="h-56 bg-dark-850 flex items-center justify-center relative">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent z-10"></div>
+              <div
+                class="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center text-2xl shadow-xl z-20 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play ml-1"></i>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-20 bg-dark-900/80 px-2.5 py-1 rounded text-[11px] font-semibold text-slate-200">
+                Epic Tyres • Coimbatore
+              </div>
+              <div class="absolute bottom-4 left-4 z-20 text-xs font-semibold text-white">
+                Stock & tyre information
+              </div>
+            </div> -->
     </div>
 
-    <!-- Main Headline -->
-    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-3xl leading-[1.1]">
-      Engineered for the <span
-        class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">Road
-        Ahead.</span>
-    </h1>
-
-    <!-- Sub-headline -->
-    <p class="mt-6 text-lg sm:text-xl text-neutral-400 max-w-2xl font-normal leading-relaxed">
-      Combining ultra-durable silica compounds with dynamic tread geometry. Built for extreme grip, whisper-quiet
-      highway cruising, and peak all-weather control.
-    </p>
-
-    <!-- Countdown Timer -->
-    <div class="grid grid-cols-4 gap-3 sm:gap-6 my-10 w-full max-w-md">
-      <div
-        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
-        <span id="days" class="text-2xl sm:text-4xl font-bold text-white font-mono">00</span>
-        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Days</span>
-      </div>
-      <div
-        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
-        <span id="hours" class="text-2xl sm:text-4xl font-bold text-white font-mono">00</span>
-        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Hours</span>
-      </div>
-      <div
-        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
-        <span id="minutes" class="text-2xl sm:text-4xl font-bold text-white font-mono">00</span>
-        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Mins</span>
-      </div>
-      <div
-        class="flex flex-col p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-md shadow-xl">
-        <span id="seconds" class="text-2xl sm:text-4xl font-bold text-amber-500 font-mono">00</span>
-        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mt-1 font-semibold">Secs</span>
-      </div>
+    </div>
     </div>
 
-    <!-- Waitlist Capture Form -->
-    <div class="w-full max-w-lg">
-      <form id="waitlist-form"
-        class="flex flex-col sm:flex-row gap-3 bg-neutral-900/90 p-2 rounded-2xl border border-neutral-800 focus-within:border-amber-500/60 shadow-2xl transition-all">
-        <div class="flex-1 flex items-center px-3 gap-2">
-          <i data-lucide="mail" class="w-5 h-5 text-neutral-500"></i>
-          <input type="email" required placeholder="Enter your email for VIP early access..."
-            class="w-full bg-transparent text-sm text-white placeholder-neutral-500 focus:outline-none py-2" />
-        </div>
-        <button type="submit"
-          class="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-neutral-950 font-bold text-sm rounded-xl transition-all transform active:scale-95 shadow-lg shadow-amber-500/20 whitespace-nowrap flex items-center justify-center gap-2">
-          Join VIP List
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </button>
-      </form>
-      <p id="success-msg" class="hidden mt-3 text-sm text-emerald-400 font-medium">
-        ✓ You're on the list! Keep an eye on your inbox for launch privileges.
-      </p>
-      <p class="mt-3 text-xs text-neutral-500">
-        🔒 Zero spam. Get 20% off your launch order + priority shipping.
-      </p>
     </div>
+  </section>
 
-    <!-- Feature Pillars -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 text-left w-full max-w-4xl">
-      <div class="p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
-        <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 mb-4">
-          <i data-lucide="shield-check" class="w-5 h-5"></i>
+  <section id="location" class="py-20 border-t border-dark-700/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="bg-dark-850 rounded-3xl border border-dark-700 overflow-hidden shadow-2xl">
+        <div class="grid lg:grid-cols-12">
+
+          <!-- Map Info Details -->
+          <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2">
+                <i class="fa-solid fa-location-dot"></i> Visit Our Tyre Yard
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white">Epic Tyres Depot</h3>
+              <p class="text-slate-400 text-sm mt-3">
+                Visit Epic Tyres at New Market, M.M.A. Market, Ukkadam, Coimbatore for in-person tyre selection and
+                fitment support.
+              </p>
+
+              <div class="space-y-4 mt-6 text-sm">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 text-brand-500 mt-1 shrink-0"><i class="fa-solid fa-map-pin"></i></div>
+                  <div class="text-slate-300">
+                    <strong>Workshop Location:</strong><br />
+                    <span class="text-white font-medium">New Market, Ukkadam,</span><br />
+                    Coimbatore. Tamilnadu.<br />
+                    <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1.5 mt-2 text-xs text-brand-400 hover:text-brand-300 font-semibold underline underline-offset-2">
+                      <i class="fa-solid fa-diamond-turn-right text-xs"></i> Get GPS Directions on Google Maps
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 text-brand-500 mt-1 shrink-0"><i class="fa-solid fa-phone"></i></div>
+                  <div class="text-slate-300">
+                    <strong>Direct Hotline:</strong><br />
+                    <a href="tel:+916374499613" class="text-white hover:text-brand-400 font-semibold">+91 63744
+                      99613</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 text-brand-500 mt-1 shrink-0"><i class="fa-solid fa-clock"></i></div>
+                  <div class="text-slate-300">
+                    <strong>Operating Hours:</strong><br />
+                    Monday – Saturday: 9:00 AM – 9:00 PM<br />
+                    Sunday: 9:00 AM – 4:00 PM
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 text-brand-500 mt-1 shrink-0"><i class="fa-brands fa-google"></i></div>
+                  <div class="text-slate-300">
+                    <strong>Google Profile Rating:</strong><br />
+                    <div class="flex items-center gap-1 text-brand-400 font-bold mt-0.5">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <span class="text-slate-200 text-xs ml-1 font-semibold">5.0 / 5.0 on Google</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row gap-3">
+              <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+                class="px-5 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+              </a>
+              <a href="tel:+916374499613"
+                class="px-5 py-3 rounded-xl bg-dark-800 hover:bg-dark-700 border border-dark-700 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-solid fa-phone"></i> Call 63744 99613
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Google Maps Embed -->
+          <div
+            class="lg:col-span-7 bg-dark-900 min-h-[400px] relative p-3 sm:p-5 border-t lg:border-t-0 lg:border-l border-dark-700 flex flex-col justify-center">
+            <div
+              class="w-full h-full min-h-[380px] rounded-2xl overflow-hidden border border-dark-700/80 shadow-2xl relative bg-dark-800 group">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.6869491529114!2d76.96198679999999!3d10.9869851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859d4cdb8b7f1%3A0x33867692ae91398e!2sEpic%20Tyres!5e0!3m2!1sen!2sin!4v1790794394809!5m2!1sen!2sin"
+                class="w-full h-full min-h-[380px] rounded-2xl border-0" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+              <div class="absolute bottom-4 right-4 z-20">
+                <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+                  class="px-3.5 py-2 rounded-xl bg-dark-900/90 hover:bg-dark-900 text-brand-400 hover:text-brand-300 border border-dark-700 text-xs font-bold shadow-lg flex items-center gap-1.5 transition-colors">
+                  <i class="fa-solid fa-diamond-turn-right text-xs"></i> Directions in Maps App
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <h3 class="font-bold text-white text-base">Carbon-Reinforced Tread</h3>
-        <p class="text-neutral-400 text-sm mt-1">Up to 35% longer lifespan with even wear distribution across
-          high-torque setups.</p>
       </div>
 
-      <div class="p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
-        <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 mb-4">
-          <i data-lucide="cloud-rain" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-white text-base">Hydro-Channel Siping</h3>
-        <p class="text-neutral-400 text-sm mt-1">Rapid water evacuation for responsive wet braking and zero hydroplaning
-          hesitation.</p>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
-        <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 mb-4">
-          <i data-lucide="gauge" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-white text-base">EV & Performance Tuned</h3>
-        <p class="text-neutral-400 text-sm mt-1">Low rolling resistance compound designed for maximum range and acoustic
-          silence.</p>
-      </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Footer -->
-  <footer
-    class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-    <p>© 2026-2027 Epic Tyres Technologies Inc. All rights reserved.</p>
-    <div class="flex items-center gap-6">
-      <a href="#" class="hover:text-neutral-300 transition">Privacy Policy</a>
-      <a href="#" class="hover:text-neutral-300 transition">Dealer Inquiries</a>
-      <a href="#" class="hover:text-neutral-300 transition">Contact</a>
+  <footer class="bg-dark-900 border-t border-dark-700/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-dark-700/60">
+
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 flex items-center justify-center">
+              <img src="img/EpicTyresIcon.png" alt="epicLogo">
+            </div>
+            <span class="text-xl font-bold tracking-tight text-white">Epic <span
+                class="text-brand-500">Tyres</span></span>
+          </div>
+
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Used tyres for cars, SUVs and 4x4 vehicles in Coimbatore. We focus on genuine tyre condition, practical
+            pricing, current availability and Lifetime Replacement Warranty support on eligible tyres.
+          </p>
+
+          <!-- Social media handles -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.facebook.com/profile.php?id=61591326549420" target="_blank" rel="noopener noreferrer"
+              class="w-9 h-9 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors"
+              title="Facebook">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://instagram.com/epic.tyres" target="_blank" rel="noopener noreferrer"
+              class="w-9 h-9 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-pink-600 hover:border-pink-600 transition-colors"
+              title="Instagram">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://www.youtube.com/@Epic_Tyres" target="_blank" rel="noopener noreferrer"
+              class="w-9 h-9 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-red-600 hover:border-red-600 transition-colors"
+              title="YouTube">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+            <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+              class="w-9 h-9 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-emerald-600 hover:border-emerald-600 transition-colors"
+              title="Google Maps">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </a>
+            <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank" rel="noopener noreferrer"
+              class="w-9 h-9 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-emerald-500 hover:border-emerald-500 transition-colors"
+              title="WhatsApp Live">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Tyre Inventory</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#inventory" class="hover:text-brand-400 transition-colors">15" & 16" Hatchback Sizes</a></li>
+            <li><a href="#inventory" class="hover:text-brand-400 transition-colors">17" & 18" Saloon Sizes</a></li>
+            <li><a href="#inventory" class="hover:text-brand-400 transition-colors">17" – 20" SUV / 4x4 Tyres</a></li>
+            <li><a href="#inventory" class="hover:text-brand-400 transition-colors">Used Car Tyres</a></li>
+            <li><a href="#inventory" class="hover:text-brand-400 transition-colors">SUV &amp; 4x4 Tyres</a></li>
+          </ul>
+        </div>
+
+        <!-- Company & Standards -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Quality &amp; Guarantees</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">Inspected Tyres Standards</a></li>
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">Lifetime Replacement Warranty</a></li>
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">Honest &amp; Affordable Pricing</a>
+            </li>
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">Availability &amp; Delivery
+                Options</a></li>
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">Trusted Local Business</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours & Direct Hotline -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Immediate Contact</h4>
+          <div class="space-y-2 text-xs text-slate-400">
+            <p><span class="text-white font-medium">Location:</span> New Market, Ukkadam, Coimbatore. Tamilnadu.</p>
+            <p><span class="text-white font-medium">WhatsApp:</span> <a href="https://wa.me/message/5PW5J63WLOTHH1"
+                target="_blank" class="hover:text-brand-400 underline decoration-slate-600">Chat on WhatsApp</a></p>
+            <p><span class="text-white font-medium">Phone:</span> <a href="tel:+916374499613"
+                class="hover:text-brand-400">+91 63744 99613</a></p>
+            <p><span class="text-white font-medium">Hours:</span> Mon-Sat: 9 AM - 9 PM | Sun: 9 AM - 4 PM</p>
+            <div class="pt-2 flex flex-col gap-1.5">
+              <a href="https://maps.app.goo.gl/ShjHydVejnmJ6iq78" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-800 border border-dark-700 text-emerald-400 hover:border-emerald-500 font-semibold text-[11px] transition-colors">
+                <i class="fa-solid fa-location-dot text-xs"></i> Open Google Maps Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Disclaimer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; <span id="currentYear">2026</span> Epic Tyres. All rights reserved.
+        </div>
+        <div class="flex gap-6">
+          <a href="#warranty" class="hover:text-slate-400">Warranty Terms</a>
+          <a href="#location" class="hover:text-slate-400">Location &amp; Contact</a>
+        </div>
+      </div>
+
     </div>
   </footer>
 
-  <!-- Scripts for Icons and Timer -->
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // 60-Day Countdown Target
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 60);
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance < 0) return;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1Here is a clean, modern, and high - converting "Coming Soon" landing page tailored for ** Epic Tyres **. 
-
-It features an industrial, performance - driven dark theme with a live countdown timer, an email waitlist form, feature highlights, and a clean responsive structure.
-
----
-
-### Complete HTML & Tailwind CSS Code
-
-You can save this as `index.html` and open it directly in any browser:
-
-      ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Epic Tyres | Performance Engineered For Every Road</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-  <!-- Google Fonts: Inter & Montserrat -->
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link
-    href="[https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@400;500;600&display=swap)"
-    rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .heading-font {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    /* Subtle background grid pattern */
-    .bg-grid {
-      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
-      background-size: 28px 28px;
-    }
-  </style>
-  </head>
-
-  <body
-    class="bg-neutral-950 text-neutral-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
-
-    <!-- Background Decorative Accents -->
-    <div class="fixed inset-0 bg-grid pointer-events-none -z-10"></div>
-    <div
-      class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-amber-500/10 blur-[130px] rounded-full pointer-events-none -z-10">
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+    <!-- Tooltip Bubble -->
+    <div id="waTooltip"
+      class="bg-dark-850 text-white border border-dark-700 text-xs px-3.5 py-2 rounded-xl shadow-xl flex items-center gap-2 animate-bounce">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span class="font-medium">Need tyres Urgently? <strong>Chat with us!</strong></span>
+      <button onclick="document.getElementById('waTooltip').classList.add('hidden')"
+        class="text-slate-400 hover:text-white ml-1 text-sm">&times;</button>
     </div>
 
-    <!-- Header / Navigation -->
-    <header class="w-full max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <!-- Logo Mark -->
-        <div
-          class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-amber-500/20">
-          E
+    <!-- WhatsApp Pulse Action -->
+    <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank" rel="noopener noreferrer"
+      class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-dark-900 flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/30 hover:scale-110 transition-all duration-300 group"
+      aria-label="Contact on WhatsApp">
+      <i class="fa-brands fa-whatsapp text-3xl group-hover:scale-105"></i>
+    </a>
+  </div>
+
+  <div id="toastContainer" class="fixed top-6 right-6 z-50 max-w-sm w-full pointer-events-none space-y-2"></div>
+
+  <script>
+    // Set Current Year Dynamically
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Toast Notification System (Never uses alert())
+    function showNotification(title, message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+
+      const isSuccess = type === 'success';
+      const borderColor = isSuccess ? 'border-brand-500/60' : 'border-red-500/60';
+      const iconColor = isSuccess ? 'text-brand-400' : 'text-red-400';
+      const iconClass = isSuccess ? 'fa-circle-check' : 'fa-triangle-exclamation';
+
+      toast.className = `pointer-events-auto bg-dark-850 border ${borderColor} text-white p-4 rounded-2xl shadow-2xl transition-all duration-300 transform translate-x-12 opacity-0 flex items-start gap-3`;
+      toast.innerHTML = `
+        <i class="fa-solid ${iconClass} ${iconColor} text-xl mt-0.5 shrink-0"></i>
+        <div class="flex-1">
+          <h4 class="text-sm font-bold text-white">${title}</h4>
+          <p class="text-xs text-slate-400 mt-0.5">${message}</p>
         </div>
-        <span class="heading-font font-black tracking-wider text-xl uppercase">Epic<span
-            class="text-amber-500">Tyres</span></span>
-      </div>
+        <button class="text-slate-500 hover:text-white text-sm" onclick="this.parentElement.remove()">&times;</button>
+      `;
 
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
-        <span class="text-xs font-semibold uppercase tracking-widest text-neutral-400">Launching Soon</span>
-      </div>
-    </header>
+      container.appendChild(toast);
 
-    <!-- Hero & Main Content -->
-    <main class="w-full max-w-4xl mx-auto px-6 py-12 text-center flex flex-col items-center">
+      // Animate in
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-12', 'opacity-0');
+      });
 
-      <!-- Tagline Badge -->
-      <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 text-xs font-medium uppercase tracking-wider mb-8">
-        <span>Next-Gen Performance & Durability</span>
-      </div>
-
-      <!-- Main Headline -->
-      <h1 class="heading-font font-black text-4xl sm:text-6xl md:text-7xl uppercase tracking-tight leading-[1.05] mb-6">
-        Re-engineering <br class="hidden sm:block" />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500">Grip,
-          Speed & Control</span>
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="text-neutral-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-        Engineered for extreme endurance, all-weather stability, and motorsport precision. Sign up to get exclusive
-        early access and launch-week discounts.
-      </p>
-
-      <!-- Countdown Timer -->
-      <div class="grid grid-cols-4 gap-3 sm:gap-6 max-w-md w-full mb-12">
-        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
-          <span id="days" class="heading-font block text-2xl sm:text-4xl font-extrabold text-white">30</span>
-          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Days</span>
-        </div>
-        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
-          <span id="hours" class="heading-font block text-2xl sm:text-4xl font-extrabold text-white">08</span>
-          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Hours</span>
-        </div>
-        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
-          <span id="minutes" class="heading-font block text-2xl sm:text-4xl font-extrabold text-white">45</span>
-          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Mins</span>
-        </div>
-        <div class="bg-neutral-900/80 border border-neutral-800 rounded-xl p-3 sm:p-4 backdrop-blur">
-          <span id="seconds" class="heading-font block text-2xl sm:text-4xl font-extrabold text-amber-500">12</span>
-          <span class="text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">Secs</span>
-        </div>
-      </div>
-
-      <!-- Email Capture Form -->
-      <div class="w-full max-w-lg">
-        <form id="notify-form" onsubmit="event.preventDefault(); alert('You\'re on the list! Watch your inbox.');"
-          class="flex flex-col sm:flex-row gap-3">
-          <input type="email" required placeholder="Enter your email address..."
-            class="flex-1 bg-neutral-900/90 border border-neutral-800 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition" />
-          <button type="submit"
-            class="bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-black font-bold px-7 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-amber-500/20 whitespace-nowrap">
-            Notify Me
-          </button>
-        </form>
-        <p class="text-neutral-400 text-xs mt-3">🔒 No spam. Only product announcements & exclusive launch perks.</p>
-      </div>
-
-      <!-- Feature Pillars -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl w-full mt-16 pt-12 border-t border-neutral-800/80">
-        <div class="text-left p-4 rounded-xl bg-neutral-900/40 border border-neutral-800/50">
-          <div class="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 font-bold mb-3">
-            ✓</div>
-          <h3 class="font-semibold text-sm text-neutral-200 mb-1">Ultra-Grip Compound</h3>
-          <p class="text-xs text-neutral-400">Maximum traction in wet and dry conditions without compromising tread
-            life.</p>
-        </div>
-
-        <div class="text-left p-4 rounded-xl bg-neutral-900/40 border border-neutral-800/50">
-          <div class="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 font-bold mb-3">
-            ✓</div>
-          <h3 class="font-semibold text-sm text-neutral-200 mb-1">Reinforced Sidewalls</h3>
-          <p class="text-xs text-neutral-400">Built to withstand sharp impacts, potholes, and heavy cornering loads.</p>
-        </div>
-
-        <div class="text-left p-4 rounded-xl bg-neutral-900/40 border border-neutral-800/50">
-          <div class="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center text-amber-400 font-bold mb-3">
-            ✓</div>
-          <h3 class="font-semibold text-sm text-neutral-200 mb-1">Quiet-Drive Acoustics</h3>
-          <p class="text-xs text-neutral-400">Harmonic groove patterns designed to reduce road noise and cabin
-            vibration.</p>
-        </div>
-      </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer
-      class="w-full max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-900 text-xs text-neutral-400">
-      <p>&copy; <span id="year"></span> Epic Tyres. All rights reserved.</p>
-      <div class="flex gap-6">
-        <a href="#" class="hover:text-amber-400 transition">Instagram</a>
-        <a href="#" class="hover:text-amber-400 transition">Twitter / X</a>
-        <a href="#" class="hover:text-amber-400 transition">LinkedIn</a>
-      </div>
-    </footer>
-
-    <!-- Countdown Script -->
-    <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 30 days countdown simulation
-    let totalSeconds = 30 * 24 * 60 * 60 + 8 * 3600 + 45 * 60;
-    
-    function updateCountdown() {
-      const days = Math.floor(totalSeconds / (3600 * 24));
-      const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-
-      document.getElementById('days').textContent = String(days).padStart(2, '0');
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-      if (totalSeconds > 0) {
-        totalSeconds--;
-      }
+      // Auto dismiss after 5 seconds
+      setTimeout(() => {
+        toast.classList.add('translate-x-12', 'opacity-0');
+        setTimeout(() => toast.remove(), 350);
+      }, 5000);
     }
-    
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-    </script>
-  </body>
+
+    // Quick Enquiry Quantity Handling (1, 2, 4, and inline custom input)
+    let selectedHeroQtyMode = '1';
+    const customQtyInput = document.getElementById('customQtyInput');
+    const qtyButtons = document.querySelectorAll('.qty-btn');
+
+    // Deselect custom input when preset button (1, 2, 4) is clicked
+    qtyButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        qtyButtons.forEach(b => {
+          b.classList.remove('border-brand-500', 'bg-brand-500/20', 'text-brand-400', 'active');
+          b.classList.add('border-dark-700', 'bg-dark-900', 'text-slate-400');
+        });
+        this.classList.add('border-brand-500', 'bg-brand-500/20', 'text-brand-400', 'active');
+        this.classList.remove('border-dark-700', 'bg-dark-900', 'text-slate-400');
+
+        selectedHeroQtyMode = this.getAttribute('data-qty');
+
+        // Reset and unhighlight custom input
+        customQtyInput.value = '';
+        customQtyInput.classList.remove('border-brand-500', 'bg-brand-500/10', 'text-brand-400');
+        customQtyInput.classList.add('border-dark-700', 'bg-dark-900', 'text-white');
+      });
+    });
+
+    // Deselect preset buttons when user focuses or enters a custom quantity
+    const activateCustomInput = () => {
+      qtyButtons.forEach(b => {
+        b.classList.remove('border-brand-500', 'bg-brand-500/20', 'text-brand-400', 'active');
+        b.classList.add('border-dark-700', 'bg-dark-900', 'text-slate-400');
+      });
+      customQtyInput.classList.add('border-brand-500', 'bg-brand-500/10', 'text-brand-400');
+      customQtyInput.classList.remove('border-dark-700', 'bg-dark-900');
+      selectedHeroQtyMode = 'custom';
+    };
+
+    customQtyInput.addEventListener('focus', activateCustomInput);
+    customQtyInput.addEventListener('input', activateCustomInput);
+
+    // Quick Enquiry Form Submission
+    document.getElementById('heroQuickForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const vehicleModel = document.getElementById('quickCar').value.trim();
+      const width = document.getElementById('tyreWidth').value.trim();
+      const profile = document.getElementById('tyreProfile').value.trim();
+      let rim = document.getElementById('tyreRim').value.trim();
+
+      if (!vehicleModel) {
+        showNotification('Missing Vehicle', 'Please specify your vehicle model.', 'error');
+        return;
+      }
+
+      if (!width || !profile || !rim) {
+        showNotification('Missing Tyre Size', 'Please fill in Width, Profile, and Rim size.', 'error');
+        return;
+      }
+
+      // Format rim to guarantee proper uppercase standard (e.g., 16 -> R16, r16 -> R16)
+      if (!rim.toUpperCase().startsWith('R') && !isNaN(rim)) {
+        rim = 'R' + rim;
+      } else {
+        rim = rim.toUpperCase();
+      }
+
+      const formattedTyreSize = `${width}/${profile} ${rim}`;
+
+      // Resolve final quantity
+      let finalQty = 1;
+      if (selectedHeroQtyMode === 'custom' || customQtyInput.value.trim() !== '') {
+        const parsedVal = parseInt(customQtyInput.value, 10);
+        if (isNaN(parsedVal) || parsedVal <= 0) {
+          showNotification('Invalid Quantity', 'Please enter a valid whole number for custom quantity (1 or more).', 'error');
+          customQtyInput.focus();
+          return;
+        }
+        finalQty = parsedVal;
+      } else {
+        finalQty = parseInt(selectedHeroQtyMode, 10) || 1;
+      }
+
+      const qtyText = finalQty === 1 ? '1 tyre' : `${finalQty} tyres`;
+      const msg = `Hi Epic Tyres! I would like to check availability and price for *${qtyText}* of size *${formattedTyreSize}* for my *${vehicleModel}*. Please share available brands, tyre condition, and photos.`;
+
+      showNotification('Opening WhatsApp', `Connecting you with Epic Tyres desk for ${qtyText} (${formattedTyreSize})...`);
+
+      setTimeout(() => {
+        window.open(`https://wa.me/message/5PW5J63WLOTHH1?text=${encodeURIComponent(msg)}`, '_blank');
+      }, 500);
+    });
+
+    // Lifetime Replacement Warranty modal
+    const warrantyModal = document.getElementById('warrantyModal');
+    window.openWarrantyModal = function () {
+      warrantyModal.classList.remove('hidden');
+      warrantyModal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    };
+    window.closeWarrantyModal = function () {
+      warrantyModal.classList.add('hidden');
+      warrantyModal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    };
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !warrantyModal.classList.contains('hidden')) {
+        closeWarrantyModal();
+      }
+    });
+
+    // Popular Tyre Sizes Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const tyreCards = document.querySelectorAll('.tyre-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-brand-500', 'text-dark-900', 'active');
+          b.classList.add('bg-dark-800', 'border', 'border-dark-700', 'text-slate-300');
+        });
+        this.classList.add('bg-brand-500', 'text-dark-900', 'active');
+        this.classList.remove('bg-dark-800', 'border', 'border-dark-700', 'text-slate-300');
+
+        const filter = this.getAttribute('data-filter');
+        tyreCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Handle Direct Size Enquiry
+    window.enquireSpecificTyreSize = function (tyreSize) {
+      const msg = `Hi Epic Tyres! I would like to check available brands, condition, and pricing for tyre size *${tyreSize}*.`;
+      showNotification('Opening WhatsApp', `Checking available options for size ${tyreSize}...`);
+      setTimeout(() => {
+        window.open(`https://wa.me/message/5PW5J63WLOTHH1?text=${encodeURIComponent(msg)}`, '_blank');
+      }, 400);
+    };
+  </script>
+</body>
 
 </html>
