@@ -41,6 +41,15 @@
               800: '#181e2b',
               700: '#262f42',
             }
+          },
+          animation: {
+            marquee: 'marquee 30s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
           }
         }
       }
@@ -70,6 +79,11 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
+
+    /* Pause scrolling on hover or touch */
+    .marquee-container:hover .marquee-content {
+      animation-play-state: paused;
+    }
   </style>
 
   <script type="application/ld+json">
@@ -93,6 +107,17 @@
     ]
   }
   </script>
+
+  <script>
+    // Epic Tyres: contextual WhatsApp helper for future buttons.
+    const EPIC_WA_BASE = 'https://wa.me/message/5PW5J63WLOTHH1';
+    function epicWhatsAppUrl(purpose) {
+      return EPIC_WA_BASE + '?text=' + encodeURIComponent(
+        'I saw Epic Tyres website online, I would like to ' + purpose
+      );
+    }
+  </script>
+
 </head>
 
 <body class="bg-dark-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-black">
@@ -130,7 +155,8 @@
           <i class="fa-solid fa-location-dot text-emerald-400"></i>
           <span class="hidden md:inline">Ukkadam, Coimbatore</span>
         </a>
-        <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
+          target="_blank" rel="noopener noreferrer"
           class="hover:text-green-400 transition-colors flex items-center gap-1 font-semibold text-brand-400 ml-1">
           <i class="fa-brands fa-whatsapp"></i> Chat Live
         </a>
@@ -168,7 +194,8 @@
           class="px-5 py-2.5 rounded-xl border border-dark-700 hover:border-slate-500 text-slate-200 text-sm font-semibold transition-all flex items-center gap-2">
           <i class="fa-solid fa-phone text-xs text-brand-400"></i> Call Desk
         </a>
-        <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank"
+        <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
+          target="_blank"
           class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm shadow-md shadow-brand-500/25 flex items-center gap-2 transition-all hover:shadow-brand-500/40">
           <i class="fa-brands fa-whatsapp text-lg"></i>
           <span>Check Stock</span>
@@ -193,7 +220,8 @@
           class="text-center py-2.5 rounded-xl border border-dark-700 text-white font-semibold flex items-center justify-center gap-2">
           <i class="fa-solid fa-phone text-sm text-brand-400"></i> Call 63744 99613
         </a>
-        <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank"
+        <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
+          target="_blank"
           class="text-center py-2.5 rounded-xl bg-brand-500 text-dark-900 font-bold flex items-center justify-center gap-2">
           <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Enquiry
         </a>
@@ -201,14 +229,15 @@
     </div>
   </header>
 
-  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+  <section
+    class="pt-12 pb-12 md:pt-16 md:pb-16 relative overflow-hidden min-h-[calc(100dvh-150px)] md:min-h-[calc(100dvh-114px)] flex flex-col justify-between">
     <!-- Subtle Background Glows -->
     <div
       class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-brand-500/10 blur-[130px] rounded-full pointer-events-none">
     </div>
     <div class="absolute bottom-0 right-10 w-96 h-96 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-auto w-full">
       <div class="grid lg:grid-cols-12 gap-12 items-center">
 
         <!-- Left Hero Copy -->
@@ -236,7 +265,7 @@
               class="px-7 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-extrabold text-sm sm:text-base transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brand-500/30 flex items-center gap-2">
               <i class="fa-solid fa-layer-group"></i> Browse Popular Sizes
             </a>
-            <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20want%20to%20send%20a%20photo%20of%20my%20car%20tyre%20for%20quote"
+            <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20send%20a%20photo%20of%20my%20car%20tyre%20for%20a%20quote."
               target="_blank"
               class="px-7 py-3.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-dark-700 text-slate-100 font-semibold text-sm sm:text-base transition-all flex items-center gap-2.5">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i> Send Photo on WhatsApp
@@ -365,39 +394,136 @@
 
       </div>
     </div>
-  </section>
 
-  <!-- <section id="about" class="py-16 bg-dark-900 border-b border-dark-700/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-3 gap-8 items-start">
-        <div class="lg:col-span-2">
-          <span class="text-brand-500 font-semibold text-xs uppercase tracking-widest">Epic Tyres • Ukkadam •
-            Coimbatore</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Used Tyres in Coimbatore Across
-            Many Brands & Sizes</h2>
-          <p class="text-slate-300 leading-relaxed mt-4">Epic Tyres is a local tyre business at New Market, M.M.A.
-            Market, Ukkadam, Coimbatore. We specialise in used tyres across many brands and tyre sizes for cars, SUVs
-            and 4x4 vehicles. Our stock changes regularly, so contact us for current options.</p>
-          <p class="text-slate-400 leading-relaxed mt-3">If you are looking for <strong class="text-slate-200">used
-              tyres in Coimbatore</strong>, a <strong class="text-slate-200">used tyre shop in Coimbatore</strong>,
-            <strong class="text-slate-200">second-hand tyres in Coimbatore</strong> or a <strong
-              class="text-slate-200">used tyre shop in Ukkadam</strong>, send us your vehicle model and tyre size. We
-            can check current brands, condition, quantity and price.
-          </p>
+    <!-- Bottom Running Brands Marquee Banner -->
+    <div class="w-full border-t border-dark-700/60 bg-dark-900/80 backdrop-blur-md pt-6 pb-4 mt-12 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 mb-3 text-center sm:text-left">
+      </div>
+
+      <div
+        class="marquee-container overflow-hidden whitespace-nowrap relative w-full flex [mask-image:_linear-gradient(to_right,_transparent_0,_black_100px,_black_calc(100%-100px),_transparent_100%)]">
+        <div class="marquee-content inline-flex items-center gap-8 sm:gap-12 animate-marquee shrink-0">
+
+          <!-- Brand Badge 1 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/mrf-logo.png" alt="MRF"> MRF
+          </div>
+          <!-- Brand Badge 2 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/michelin-logo.png" alt="MICHELIN"> MICHELIN
+          </div>
+          <!-- Brand Badge 3 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/bridgestone-logo.png" alt="BRIDGESTONE"> BRIDGESTONE
+          </div>
+          <!-- Brand Badge 4 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/goodyear-logo.png" alt="GOODYEAR"> GOODYEAR
+          </div>
+          <!-- Brand Badge 5 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/apollo-logo.png" alt="APOLLO"> APOLLO
+          </div>
+          <!-- Brand Badge 6 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/ceat-logo.png" alt="CEAT"> CEAT
+          </div>
+          <!-- Brand Badge 7 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/yokohama-logo.png" alt="YOKOHAMA"> YOKOHAMA
+          </div>
+          <!-- Brand Badge 8 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/continental-logo.png" alt="CONTINENTAL"> CONTINENTAL
+          </div>
+          <!-- Brand Badge 9 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/pirelli-logo.png" alt="PIRELLI"> PIRELLI
+          </div>
+          <!-- Brand Badge 10 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/hankook-logo.png" alt="HANKOOK"> HANKOOK
+          </div>
+          <!-- Brand Badge 11 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/bkt-logo.png" alt="BKT"> BKT
+          </div>
+          <!-- Brand Badge 12 -->
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/jk-logo.png" alt="JK TYRE"> JK TYRE
+          </div>
+
         </div>
-        <div class="bg-dark-850 border border-dark-700 rounded-2xl p-6">
-          <h3 class="text-lg font-bold text-white">Looking for a specific tyre?</h3>
-          <p class="text-sm text-slate-400 mt-2">Send your tyre size, vehicle model or a photo of the tyre sidewall. We
-            will check current availability.</p>
-          <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20want%20to%20check%20tyre%20availability."
-            target="_blank" rel="noopener noreferrer"
-            class="mt-5 w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Check Availability on WhatsApp
-          </a>
+
+        <!-- Duplicated Loop for Seamless Continuous Scrolling -->
+        <div class="marquee-content inline-flex items-center gap-8 sm:gap-12 animate-marquee shrink-0"
+          aria-hidden="true">
+
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/mrf-logo.png" alt="MRF"> MRF
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/michelin-logo.png" alt="MICHELIN"> MICHELIN
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/bridgestone-logo.png" alt="BRIDGESTONE"> BRIDGESTONE
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/goodyear-logo.png" alt="GOODYEAR"> GOODYEAR
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/apollo-logo.png" alt="APOLLO"> APOLLO
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/ceat-logo.png" alt="CEAT"> CEAT
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/yokohama-logo.png" alt="YOKOHAMA"> YOKOHAMA
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/continental-logo.png" alt="CONTINENTAL"> CONTINENTAL
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/pirelli-logo.png" alt="PIRELLI"> PIRELLI
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/hankook-logo.png" alt="HANKOOK"> HANKOOK
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/falken-logo.png" alt="FALKEN"> FALKEN
+          </div>
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-dark-850 border border-dark-700/80 text-slate-200 font-bold text-xs sm:text-sm hover:border-brand-500/50 hover:text-brand-400 transition-colors cursor-pointer">
+            <img class="h-24" src="img/brands/bkt-logo.png" alt="bkt TYRE"> bkt TYRE
+          </div>
+
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section id="quality" class="py-20 bg-dark-850 border-y border-dark-700/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -529,7 +655,7 @@
         <p class="text-slate-400">Please keep your purchase details and contact us if you believe an eligible tyre has
           developed a covered problem.</p>
       </div>
-      <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20would%20like%20to%20know%20the%20warranty%20terms%20for%20a%20tyre."
+      <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
         target="_blank" rel="noopener noreferrer"
         class="mt-6 w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold text-sm flex items-center justify-center gap-2">
         <i class="fa-brands fa-whatsapp"></i> Ask About Warranty
@@ -802,7 +928,7 @@
           <span class="text-sm text-slate-300">Looking for a different tyre size, brand or vehicle fitment? Ask us for
             current availability.</span>
         </div>
-        <a href="https://wa.me/message/5PW5J63WLOTHH1?text=Hi%20Epic%20Tyres%2C%20I%20am%20looking%20for%20a%20specific%20tyre%20size"
+        <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20check%20availability%20for%20a%20specific%20tyre%20size."
           target="_blank" rel="noopener noreferrer"
           class="text-xs font-bold text-brand-400 hover:text-brand-300 underline underline-offset-4 whitespace-nowrap">
           Check any custom size on WhatsApp &rarr;
@@ -933,52 +1059,6 @@
         </div>
 
       </div>
-
-      <!-- Live YouTube Video & Review Teaser -->
-      <!-- <div class="mt-12 bg-dark-900 rounded-2xl border border-dark-700 p-6 sm:p-8">
-        <div class="grid md:grid-cols-12 gap-8 items-center">
-
-          <div class="md:col-span-6 space-y-4">
-            <div class="inline-flex items-center gap-2 text-xs font-bold text-red-400 uppercase tracking-widest">
-              <i class="fa-solid fa-play"></i> Featured Video Walkthrough
-            </div>
-            <h3 class="text-2xl font-bold text-white">Tyre Tips, Stock Updates &amp; Offers</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Follow Epic Tyres for real stock updates, tyre-size information, used-tyre tips, stock arrivals and
-              offers. We regularly share actual products and business updates on our social channels.
-            </p>
-            <div class="flex flex-wrap gap-4 pt-2">
-              <a href="https://www.youtube.com/@Epic_Tyres" target="_blank"
-                class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs flex items-center gap-2 transition-colors">
-                <i class="fa-brands fa-youtube"></i> Watch on YouTube
-              </a>
-              <a href="https://instagram.com/epic.tyres" target="_blank"
-                class="px-5 py-2.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-dark-700 text-slate-200 font-semibold text-xs flex items-center gap-2 transition-colors">
-                <i class="fa-brands fa-instagram"></i> Follow Daily Deliveries
-              </a>
-            </div>
-          </div> -->
-
-      <!-- Video Thumbnail Card -->
-      <!-- <div class="md:col-span-6 relative group overflow-hidden rounded-xl border border-dark-700">
-            <div class="h-56 bg-dark-850 flex items-center justify-center relative">
-              <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent z-10"></div>
-              <div
-                class="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center text-2xl shadow-xl z-20 group-hover:scale-110 transition-transform">
-                <i class="fa-solid fa-play ml-1"></i>
-              </div>
-              <div
-                class="absolute top-4 left-4 z-20 bg-dark-900/80 px-2.5 py-1 rounded text-[11px] font-semibold text-slate-200">
-                Epic Tyres • Coimbatore
-              </div>
-              <div class="absolute bottom-4 left-4 z-20 text-xs font-semibold text-white">
-                Stock & tyre information
-              </div>
-            </div> -->
-    </div>
-
-    </div>
-    </div>
 
     </div>
   </section>
@@ -1129,7 +1209,8 @@
               title="Google Maps">
               <i class="fa-solid fa-location-dot text-sm"></i>
             </a>
-            <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
+              target="_blank" rel="noopener noreferrer"
               class="w-9 h-9 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-300 hover:text-white hover:bg-emerald-500 hover:border-emerald-500 transition-colors"
               title="WhatsApp Live">
               <i class="fa-brands fa-whatsapp text-sm"></i>
@@ -1168,7 +1249,8 @@
           <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Immediate Contact</h4>
           <div class="space-y-2 text-xs text-slate-400">
             <p><span class="text-white font-medium">Location:</span> New Market, Ukkadam, Coimbatore. Tamilnadu.</p>
-            <p><span class="text-white font-medium">WhatsApp:</span> <a href="https://wa.me/message/5PW5J63WLOTHH1"
+            <p><span class="text-white font-medium">WhatsApp:</span> <a
+                href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
                 target="_blank" class="hover:text-brand-400 underline decoration-slate-600">Chat on WhatsApp</a></p>
             <p><span class="text-white font-medium">Phone:</span> <a href="tel:+916374499613"
                 class="hover:text-brand-400">+91 63744 99613</a></p>
@@ -1209,7 +1291,8 @@
     </div>
 
     <!-- WhatsApp Pulse Action -->
-    <a href="https://wa.me/message/5PW5J63WLOTHH1" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/message/5PW5J63WLOTHH1?text=I%20saw%20Epic%20Tyres%20website%20online%2C%20I%20would%20like%20to%20know%20more%20about%20your%20used%20tyres."
+      target="_blank" rel="noopener noreferrer"
       class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-dark-900 flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/30 hover:scale-110 transition-all duration-300 group"
       aria-label="Contact on WhatsApp">
       <i class="fa-brands fa-whatsapp text-3xl group-hover:scale-105"></i>
@@ -1349,7 +1432,7 @@
       }
 
       const qtyText = finalQty === 1 ? '1 tyre' : `${finalQty} tyres`;
-      const msg = `Hi Epic Tyres! I would like to check availability and price for *${qtyText}* of size *${formattedTyreSize}* for my *${vehicleModel}*. Please share available brands, tyre condition, and photos.`;
+      const msg = `I saw Epic Tyres website online, I would like to check availability and price for *${qtyText}* of size *${formattedTyreSize}* for my *${vehicleModel}*. Please share available brands, tyre condition, and photos.`;
 
       showNotification('Opening WhatsApp', `Connecting you with Epic Tyres desk for ${qtyText} (${formattedTyreSize})...`);
 
@@ -1402,7 +1485,7 @@
 
     // Handle Direct Size Enquiry
     window.enquireSpecificTyreSize = function (tyreSize) {
-      const msg = `Hi Epic Tyres! I would like to check available brands, condition, and pricing for tyre size *${tyreSize}*.`;
+      const msg = `I saw Epic Tyres website online, I would like to check availability for tyre size *${tyreSize}*. Please share available brands, tyre condition, and pricing.`;
       showNotification('Opening WhatsApp', `Checking available options for size ${tyreSize}...`);
       setTimeout(() => {
         window.open(`https://wa.me/message/5PW5J63WLOTHH1?text=${encodeURIComponent(msg)}`, '_blank');
