@@ -4,3 +4,9 @@
   [plugins.inputs]
   cloudName = "[uwh0aakm]"
   imagesPath = "/img"
+
+[[redirects]]
+  from = "/qr1"
+  to = "/qr"
+  status = 302
+  force = true
